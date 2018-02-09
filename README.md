@@ -4,7 +4,7 @@ All mentioned commands must be called without the surrounding single-quote (').
 
 Assuming you are in the main directory, one can compile the program by using:
 
-'javac -d classes/ src/Minesweeper.java'
+      'javac -d classes/ src/Minesweeper.java'
 
 After a successful compilation, the program may be ran two different ways:
 
@@ -13,7 +13,7 @@ After a successful compilation, the program may be ran two different ways:
       Use the command:
         'java -cp classes/ Minesweeper [file_path]'
         
-      ...where [file_path] points to the seed file. The seed file will not work unless it is in a very specific format, which is as follows (without the '[]' brackets):
+  ...where [file_path] points to the seed file. The seed file will not work unless it is in a very specific format, which is as follows (without the '[]' brackets):
       
         [total_number_of_rows] [total_number_of_columns]
         [num of mines]
