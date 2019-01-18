@@ -426,7 +426,7 @@ public class Minesweeper {
     private void guess(int row, int col) {
         if(isInBounds(row, col)) {
             gameGrid[row][col] = GUESS_SYMBOL;
-        } else if (!isInBounds(row, col)) {
+        } else {
             System.out.println("\nYou tried to guess a square that does not exist!");
         }
         roundsCompleted++;
