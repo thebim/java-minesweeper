@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * This class represents a Minesweeper game.
  *
- * @author Timmy Iang (UGA ID #811478161)
+ * @author Tim Iang
  */
 public class Minesweeper {
 
@@ -408,10 +408,10 @@ public class Minesweeper {
         if(isInBounds(row, col)) {
             gameGrid[row][col] = MARK_SYMBOL;
             markedGrid[row][col] = true;
-        } else if (!isInBounds(row, col)) {
+	    roundsCompleted++;
+        } else {
             System.out.println("\nYou tried to mark a square that does not exist!");
         }
-        roundsCompleted++;
         gameLoop();
     }
 
@@ -426,10 +426,10 @@ public class Minesweeper {
     private void guess(int row, int col) {
         if(isInBounds(row, col)) {
             gameGrid[row][col] = GUESS_SYMBOL;
+	    roundsCompleted++;
         } else {
             System.out.println("\nYou tried to guess a square that does not exist!");
         }
-        roundsCompleted++;
         gameLoop();
     }
 
